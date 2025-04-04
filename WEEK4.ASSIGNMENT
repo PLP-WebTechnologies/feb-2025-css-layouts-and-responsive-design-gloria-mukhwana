@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #78b95e;
+            color: white;
+            padding: 10px 0;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        .header a:hover {
+            background-color: #575757;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        #home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: url('homes.jpg') no-repeat center center/cover;
+        opacity: 0.3; 
+        z-index: -1;
+        background-size: cover;
+        background-attachment: fixed;
+        }
+        
+        #home h1 {
+            font-size: 3rem;
+        }
+        
+        #services {
+            background-color: #475e75;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        #contact {
+            background-color: rgb(131, 117, 101);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        #about {
+            background-color: rgb(141, 83, 100);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+    <title>Kidani Homes</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="#">Kidani Homes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section id="home" class="container">
+            <h1>Welcome to Kidani Homes</h1>
+            <p>Here is where you get a property that is more than just a house. This is where we help you get a home and memories that are worthwhile!</p>
+        </section>
+        <section id="about" class="container">
+            <h2>About Us</h2>
+            <div style="background-color: rgb(105, 69, 69);"></div>
+            <p>We are dedicated to providing the best properties possible. Our properties have been set up in the keenest ways, making sure to pay attention to detail with every bit.
+                Here, each building tells a story, and each room is a chapter waiting to be written. We are not just selling properties; we are offering a lifestyle, a community, and a place to call home.
+                Our mission is to create spaces that inspire, nurture, and elevate the human experience. We believe that a home is not just a structure; it is a sanctuary where memories are made and dreams are realized.
+                With a commitment to quality, innovation, and sustainability, we strive to build homes that stand the test of time. Our team of experts is passionate about design, architecture, and construction, ensuring that every project reflects our values and vision.
+            </p>
+        </section>
+        <section id="services" class="container">
+            <h2>Our Services</h2>
+            <p>We offer a range of services including but not limited to:</p>
+            <ul class="list-group">
+                <li class="list-group-item">Property Management</li>
+                <li class="list-group-item">Real Estate Consulting</li>
+                <li class="list-group-item">Interior Design</li>
+                <li class="list-group-item">Construction Services</li>
+                <li class="list-group-item">Property Valuation</li>
+                <li class="list-group-item">Home Staging</li>
+                <li class="list-group-item">Real Estate Investment</li>
+            </ul>
+        </section>
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <p>For further discussions, engage us on this email or fill out this form and we'll be sure to get back to you.</p>
+            <a href="mailto:kidanihomes@gmail.com" class="btn btn-primary mb-3">Email</a>
+            <form action="submit_form.php" method="post" class="row g-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="col-12">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Kidani Homes. All rights reserved.</p>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Example: Smooth scrolling for navigation links
+        document.querySelectorAll('a.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
